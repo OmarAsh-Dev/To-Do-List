@@ -20,20 +20,22 @@
     max-width: 540px;
     background: #fff;
     border-radius: 10px;
-    margin: 100px auto 20px;
-    padding: 40px 30px 70px;
+    margin: 50px auto 20px;
+    padding: 20px 15px 35px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .todo-app h2 {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    margin-bottom: 15px;
     color: #002765;
+    font-size: 1.5rem;
 }
 
 .todo-app img {
-    width: 30px;
+    width: 25px;
     margin-left: 10px;
 }
 
@@ -43,9 +45,9 @@
     align-items: center;
     justify-content: space-between;
     background: #e1e2e7;
-    padding-left: 20px;
+    padding-left: 15px;
     border-radius: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 input {
@@ -63,19 +65,18 @@ button {
     border: none;
     outline: none;
     background: #ff5945;
-    padding: 16px 32px;
-    border-radius: 40px;
+    padding: 12px 20px;
+    border-radius: 30px;
     cursor: pointer;
     color: #fff;
     font-size: 16px;
-    
 }
 
 /* List Items */
 ul li {
     list-style: none;
-    font-size: 17px;
-    padding: 12px 8px 12px 50px;
+    font-size: 16px;
+    padding: 10px 8px 10px 40px;
     user-select: none;
     cursor: pointer;
     position: relative;
@@ -84,14 +85,14 @@ ul li {
 ul li::before {
     content: '';
     position: absolute;
-    height: 28px;
-    width: 28px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     background: url(images/unchecked.png);
     background-size: cover;
     background-position: center;
-    top: 8px;
-    left: 8px;
+    top: 6px;
+    left: 6px;
 }
 
 ul li.checked {
@@ -106,15 +107,15 @@ ul li.checked::before {
 
 /* Due Date */
 ul li .date-span {
-    font-size: 14px;
+    font-size: 12px;
     color: #888;
     margin-left: 10px;
-    margin-right: 60px;
+    margin-right: 50px;
     position: absolute;
-    right: 40px;
+    right: 30px;
     top: 50%;
-    transform: translateY(-50%); /* Center the due date vertically */
-    white-space: nowrap; /* Ensure the date stays on one line */
+    transform: translateY(-50%);
+    white-space: nowrap;
 }
 
 /* Delete Button */
@@ -123,11 +124,11 @@ ul li span {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
     color: #555;
-    line-height: 40px;
+    line-height: 35px;
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
@@ -135,4 +136,44 @@ ul li span {
 
 ul li span:hover {
     color: #e1e2e7;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .todo-app {
+        padding: 15px 10px 30px;
+    }
+
+    .todo-app h2 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    ul li {
+        font-size: 14px;
+        padding: 8px 6px 8px 30px;
+    }
+
+    ul li::before {
+        height: 20px;
+        width: 20px;
+        top: 5px;
+        left: 5px;
+    }
+
+    ul li .date-span {
+        font-size: 10px;
+        margin-right: 20px;
+    }
+
+    ul li span {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
 }
