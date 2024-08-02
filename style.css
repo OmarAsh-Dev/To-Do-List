@@ -1,45 +1,54 @@
-*{
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins' , sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-.container{
+
+/* Container */
+.container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(175deg,#ff6544,#163677,#962eb1);
+    background: linear-gradient(175deg, #ff6544, #163677, #962eb1);
     padding: 10px;
 }
-.todo-app{
+
+/* To-Do App */
+.todo-app {
     width: 100%;
     max-width: 540px;
     background: #fff;
     border-radius: 10px;
     margin: 100px auto 20px;
-    padding: 40px 30px 70px; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-
+    padding: 40px 30px 70px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-.todo-app h2{
+
+.todo-app h2 {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     color: #002765;
 }
-.todo-app img{
+
+.todo-app img {
     width: 30px;
     margin-left: 10px;
 }
-.row{
+
+/* Row */
+.row {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     background: #e1e2e7;
     padding-left: 20px;
     border-radius: 30px;
     margin-bottom: 25px;
 }
-input{
+
+input {
     flex: 1;
     border: none;
     outline: none;
@@ -49,7 +58,8 @@ input{
     border-radius: 30px;
     font-size: 16px;
 }
-button{
+
+button {
     border: none;
     outline: none;
     background: #ff5945;
@@ -59,6 +69,8 @@ button{
     color: #fff;
     font-size: 16px;
 }
+
+/* List Items */
 ul li {
     list-style: none;
     font-size: 17px;
@@ -67,6 +79,7 @@ ul li {
     cursor: pointer;
     position: relative;
 }
+
 ul li::before {
     content: '';
     position: absolute;
@@ -79,19 +92,36 @@ ul li::before {
     top: 12px;
     left: 8px;
 }
-ul li.checked{
+
+ul li.checked {
     color: #555;
     text-decoration: line-through;
 }
-ul li.checked::before{
-    text-decoration: none;
+
+ul li.checked::before {
     background: url(images/checked.png);
     background-size: cover;
 }
-ul li span{
+
+/* Due Date */
+ul li .date-span {
+    font-size: 14px;
+    color: #888;
+    margin-left: 10px;
+    margin-right: 60px;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%); /* Center the due date vertically */
+    white-space: nowrap; /* Ensure the date stays on one line */
+}
+
+/* Delete Button */
+ul li span {
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 40px;
     height: 40px;
     font-size: 22px;
@@ -99,9 +129,9 @@ ul li span{
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
+    cursor: pointer;
 }
-ul li span:hover{
+
+ul li span:hover {
     color: #e1e2e7;
 }
-    
-
